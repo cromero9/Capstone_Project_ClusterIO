@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eventdefinitions>
+  <event format="2u1 blinker_left" name="blinker_left" type="0x20">
+    <field name="blinker_left">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+  </event>
+  <event format="2u1 blinker_right" name="blinker_right" type="0x20">
+    <field name="blinker_right">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+  </event>
+  <event format="2u1 speed 2u1 rpm 2u1 fuel 2u1 battery 2u1 oil 2u1 odometer 2u1 trip 2u1 drive 2u1 blinker_left 2u1 blinker_right 2u1 ignition" name="cluster_update" type="0x40">
+    <description>Updates the cluster UI with the latest information from the CAN bus</description>
+    <field name="battery">
+      <attr f="i" k="sb.max_value">2000</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="blinker_left">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="blinker_right">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="drive">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="fuel">
+      <attr f="i" k="sb.max_value">100</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="ignition">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="odometer">
+      <attr f="i" k="sb.max_value">65535</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="oil">
+      <attr f="i" k="sb.max_value">1000</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="rpm">
+      <attr f="i" k="sb.max_value">10000</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="speed">
+      <attr f="i" k="sb.max_value">200</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+    <field name="trip">
+      <attr f="i" k="sb.max_value">65535</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+  </event>
+  <event format="2u1 drive" name="drive_selection" type="0x20">
+    <field name="drive">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+  </event>
+  <event name="gre.animate.complete.Left_Blinker" type="0x8">
+    <label>Left_Blinker animation complete</label>
+    <description>The animation named Left_Blinker has completed</description>
+  </event>
+  <event name="gre.animate.complete.NewAnimation" type="0x8">
+    <label>NewAnimation animation complete</label>
+    <description>The animation named NewAnimation has completed</description>
+  </event>
+  <event name="gre.animate.complete.NewAnimation_copy" type="0x8">
+    <label>NewAnimation_copy animation complete</label>
+    <description>The animation named NewAnimation_copy has completed</description>
+  </event>
+  <event name="gre.animate.complete.NewAnimation_copy1" type="0x8">
+    <label>NewAnimation_copy1 animation complete</label>
+    <description>The animation named NewAnimation_copy1 has completed</description>
+  </event>
+  <event name="gre.animate.complete.Right_Blinker" type="0x8">
+    <label>Right_Blinker animation complete</label>
+    <description>The animation named Right_Blinker has completed</description>
+  </event>
+  <event name="gre.animate.stop.Left_Blinker" type="0x8">
+    <label>Left_Blinker animation stopped</label>
+    <description>The animation named Left_Blinker has been stopped</description>
+  </event>
+  <event name="gre.animate.stop.NewAnimation" type="0x8">
+    <label>NewAnimation animation stopped</label>
+    <description>The animation named NewAnimation has been stopped</description>
+  </event>
+  <event name="gre.animate.stop.NewAnimation_copy" type="0x8">
+    <label>NewAnimation_copy animation stopped</label>
+    <description>The animation named NewAnimation_copy has been stopped</description>
+  </event>
+  <event name="gre.animate.stop.NewAnimation_copy1" type="0x8">
+    <label>NewAnimation_copy1 animation stopped</label>
+    <description>The animation named NewAnimation_copy1 has been stopped</description>
+  </event>
+  <event name="gre.animate.stop.Right_Blinker" type="0x8">
+    <label>Right_Blinker animation stopped</label>
+    <description>The animation named Right_Blinker has been stopped</description>
+  </event>
+  <event format="2u1 ignition" name="ignition" type="0x40">
+    <field name="ignition">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+  </event>
+  <event name="IGNITION_OFF" type="0x40"/>
+  <event name="IGNITION_ON" type="0x40"/>
+  <event format="2u1 park" name="park_selection" type="0x20">
+    <field name="park">
+      <attr f="i" k="sb.max_value">1</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+  </event>
+  <event format="2u1 radio_channel" name="update_radio" type="0x20">
+    <field name="radio_channel">
+      <attr f="i" k="sb.max_value">65535</attr>
+      <attr f="i" k="sb.min_value">0</attr>
+    </field>
+  </event>
+</eventdefinitions>
